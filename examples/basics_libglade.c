@@ -7,12 +7,12 @@
  * modify it under the terms of the GNU Lesser General Public License
  * as published by the Free Software Foundation; either version 2.1
  * of the License, or (at your option) any later version.
- * 
+ *
  * This program is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
  * GNU Lesser General Public License for more details.
- * 
+ *
  * You should have received a copy of the GNU General Public License
  * along with this program; if not, write to the Free Software
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA
@@ -29,7 +29,6 @@
 #include <gtkdatabox_cross_simple.h>
 #include <math.h>
 
-#include <config.h>
 
 #ifdef USE_LIBGLADE
 #include <glade/glade.h>
@@ -72,7 +71,7 @@ create_basics ()
    window = glade_xml_get_widget (gxml, "window");
 
 
-   /* You could associate a scrollbar with a GtkDatabox widget either 
+   /* You could associate a scrollbar with a GtkDatabox widget either
     * this way ...*/
    scrollbar = glade_xml_get_widget (gxml, "scrollbar_x");
    box = glade_xml_get_widget (gxml, "box");
@@ -158,10 +157,10 @@ create_basics ()
    graph = gtk_databox_cross_simple_new (&color, 0);
    gtk_databox_graph_add (GTK_DATABOX (box), graph);
 
-   /* Instead of doing stuff what you see below, you could call 
+   /* Instead of doing stuff what you see below, you could call
     * gtk_databox_auto_rescale (GTK_DATABOX (box), 0.05);
-    * as is done in the other examples 
-    * Of course, you are more flexible in adjusting the scaling by doing 
+    * as is done in the other examples
+    * Of course, you are more flexible in adjusting the scaling by doing
     * it yourself, though. */
    if (0 >
        gtk_databox_calculate_extrema (GTK_DATABOX (box), &min_x, &max_x,
